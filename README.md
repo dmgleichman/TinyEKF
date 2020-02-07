@@ -1,3 +1,8 @@
+
+# Doug's version of Simon Levy TinyEKF
+
+Added a linux eclipse project and a main.c to test.
+
 # TinyEKF: Lightweight C/C++ Extended Kalman Filter with Python for prototyping
 
 <img src="fusion.png" width=500>
