@@ -1,5 +1,5 @@
 /*
- * main.c
+ * early_try_at_main.c
  *
  *  Created on: Feb 7, 2020
  *      Author: doug
@@ -21,7 +21,7 @@ ekf_t EKF;
 
 double Z[Mobs] = { 0, 0, 0, 0};
 
-int main(void)
+int main_simple_start(void)
 {
 	int i;
 	int result;

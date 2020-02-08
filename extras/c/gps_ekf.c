@@ -160,7 +160,9 @@ void error(const char * msg)
 
 int main(int argc, char ** argv)
 {    
-    // Do generic EKF initialization
+    printf("EKF test program\n");
+
+	// Do generic EKF initialization
     ekf_t ekf;
     ekf_init(&ekf, Nsta, Mobs);
 
@@ -169,7 +171,11 @@ int main(int argc, char ** argv)
 
     // Open input data file
     FILE * ifp = fopen("gps.csv", "r");
-
+    if (ifp == NULL)
+    {
+    	printf("The gps.csv file not found\n");
+    	return 1;
+    }
     // Skip CSV header
     skipline(ifp);
 

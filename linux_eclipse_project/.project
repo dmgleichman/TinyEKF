@@ -25,6 +25,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>c</name>
+			<type>2</type>
+			<location>/home/doug/doug_git/myprojects/TinyEKF/extras/c</location>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<location>/home/doug/doug_git/myprojects/TinyEKF/src</location>
