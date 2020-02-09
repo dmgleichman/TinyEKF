@@ -160,7 +160,10 @@ void error(const char * msg)
 
 int main(int argc, char ** argv)
 {    
-    printf("EKF test program\n");
+	// turn off standard output buffering so debug works better
+	setvbuf(stdout, NULL, _IONBF, 0);
+
+	printf("EKF test program\n");
 
 	// Do generic EKF initialization
     ekf_t ekf;
@@ -170,7 +173,7 @@ int main(int argc, char ** argv)
     init(&ekf);
 
     // Open input data file
-    FILE * ifp = fopen("gps.csv", "r");
+    FILE * ifp = fopen("../data/gps.csv", "r");
     if (ifp == NULL)
     {
     	printf("The gps.csv file not found\n");
@@ -185,8 +188,14 @@ int main(int argc, char ** argv)
     double Pos_KF[25][3];
 
     // Open output CSV file and write header
-    const char * OUTFILE = "ekf.csv";
+    const char * OUTFILE = "../data/ekf.csv";
     FILE * ofp = fopen(OUTFILE, "w");
+    if (ofp == NULL)
+    {
+    	printf("Error opening ekf.csv file for writing\n");
+    	return 2;
+    }
+
     fprintf(ofp, "X,Y,Z\n");
 
     int j, k;
