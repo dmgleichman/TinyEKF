@@ -30,6 +30,16 @@
 			<location>/home/doug/doug_git/myprojects/TinyEKF/extras/c</location>
 		</link>
 		<link>
+			<name>data</name>
+			<type>2</type>
+			<location>/home/doug/doug_git/myprojects/TinyEKF/data</location>
+		</link>
+		<link>
+			<name>reference</name>
+			<type>2</type>
+			<location>/home/doug/doug_git/myprojects/TinyEKF/reference</location>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<location>/home/doug/doug_git/myprojects/TinyEKF/src</location>

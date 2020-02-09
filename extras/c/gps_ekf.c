@@ -179,6 +179,8 @@ int main(int argc, char ** argv)
     	printf("The gps.csv file not found\n");
     	return 1;
     }
+    printf("Using gps.csv file for input\n");
+
     // Skip CSV header
     skipline(ifp);
 
@@ -196,7 +198,7 @@ int main(int argc, char ** argv)
     	return 2;
     }
 
-    fprintf(ofp, "X,Y,Z\n");
+
 
     int j, k;
 
@@ -222,8 +224,14 @@ int main(int argc, char ** argv)
     for (k=0; k<3; ++k)
         mean_Pos_KF[k] /= 25;
 
+    printf("Dump filtered positions minus their means to the ekf.csv file\n");
+    fprintf(ofp, "X,Y,Z\n");
 
-    // Dump filtered positions minus their means
+    printf("These are filtered positions\n");
+    printf("X,Y,Z\n");
+
+
+    // Dump filtered positions minus their means to the file
     for (j=0; j<25; ++j) {
         fprintf(ofp, "%f,%f,%f\n", 
                 Pos_KF[j][0]-mean_Pos_KF[0], Pos_KF[j][1]-mean_Pos_KF[1], Pos_KF[j][2]-mean_Pos_KF[2]);
