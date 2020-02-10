@@ -27,22 +27,22 @@
 		<link>
 			<name>data</name>
 			<type>2</type>
-			<location>C:/Users/doug/Desktop/doug_git/myprojects/TinyEKF/data</location>
+			<locationURI>PARENT-1-PROJECT_LOC/data</locationURI>
 		</link>
 		<link>
 			<name>extras</name>
 			<type>2</type>
-			<location>C:/Users/doug/Desktop/doug_git/myprojects/TinyEKF/extras</location>
+			<locationURI>PARENT-1-PROJECT_LOC/extras</locationURI>
 		</link>
 		<link>
 			<name>reference</name>
 			<type>2</type>
-			<location>C:/Users/doug/Desktop/doug_git/myprojects/TinyEKF/reference</location>
+			<locationURI>PARENT-1-PROJECT_LOC/reference</locationURI>
 		</link>
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<location>C:/Users/doug/Desktop/doug_git/myprojects/TinyEKF/src</location>
+			<locationURI>PARENT-1-PARENT_LOC/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
